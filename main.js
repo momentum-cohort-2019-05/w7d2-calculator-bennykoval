@@ -43,7 +43,7 @@ for (let individualButton of allButtons) {
 // Refactored after realising keyCode was depreciated
 document.addEventListener('keydown', function (event) {
     if (event.code === "Enter") {
-        allButtons.setAttribute("style", "transition: 0.2s ease-in-out; position: absolute; margin-top: 23.5px; width: 98.5px; height: 98.5px; box-shadow: inset 0 -3px 0 0 $lbs;");
+        document.activeElement.setAttribute("style", "transition: 0.2s ease-in-out; position: absolute; margin-top: 23.5px; width: 98.5px; height: 98.5px; box-shadow: inset 0 -3px 0 0 $lbs;");
         try {
             displayBox.value = individualButton.innerText;
             displayBox.focus()
